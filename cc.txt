@@ -1,0 +1,90 @@
+int a =1;
+             while (a==1)
+            {
+                Console.WriteLine("請輸入下列資料");
+                Console.Write("姓名: ");
+                string name = Console.ReadLine();
+
+                Console.Write("性別(1.男生 2.女生 ): ");
+                int sex = int.Parse(Console.ReadLine());
+                string gender;
+                if (sex == 1)
+                {
+                    gender = "男生";
+                }
+                else
+                {
+                    gender = "女生";
+                }
+
+                Console.Write("出生年月日: ");
+                string birth = Console.ReadLine();
+
+                Console.Write("學號: ");
+                string number = Console.ReadLine();
+
+                Console.WriteLine("");
+                Console.WriteLine($"姓名:{name}\n" +
+                    $"性別: {gender}\n" +
+                    $"出生年月日: {birth}\n" +
+                    $"學號: {number}");
+
+                Console.Write("檢查資料是否正確, 正確請輸入1, 若需重新填寫請輸入2: ");
+                a= int.Parse(Console.ReadLine());
+
+                do
+                {
+                    if (a == 1)
+                    {
+                        Console.WriteLine("已完成資料建置");
+                        return;
+                    }
+                    while (a == 2)
+                    {
+                        Console.Write("請選擇重新輸入的項目(1 ~ 4): ");
+                        int restart = int.Parse(Console.ReadLine());
+
+                        if (restart == 1){
+                             Console.Write("姓名: ");
+                            name = Console.ReadLine();
+                             Console.WriteLine("");
+                        }
+                        else if (restart == 2){
+                            Console.Write("性別(1.男生 2.女生 ): ");
+                            sex = int.Parse(Console.ReadLine());
+                        if (sex == 1){
+                             gender = "男生";
+                        }
+                        else
+                        {
+                            gender = "女生";
+                        }
+                            Console.WriteLine("");
+                         }
+
+                        else if (restart == 3)
+                        {
+                            Console.Write("出生年月日: ");
+                            birth = Console.ReadLine();
+                            Console.WriteLine("");
+                        }
+
+                        else if (restart == 4)
+                        {
+                            Console.Write("學號: ");
+                            number = Console.ReadLine();
+                            Console.WriteLine("");
+                           
+                        }
+                                Console.WriteLine($"姓名:{name}\n" +
+                                $"性別: {gender}\n" +
+                                $"出生年月日: {birth}\n" +
+                                $"學號: {number}");
+                            Console.Write("檢查資料是否正確, 正確請輸入1, 若需重新填寫請輸入2: ");
+                            a = int.Parse(Console.ReadLine());
+                    }
+
+
+                } while (true);
+
+            }
